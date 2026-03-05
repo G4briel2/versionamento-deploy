@@ -5,7 +5,7 @@ body{
     align-items: center;
     gap: 12px;
 
-    background: url(./assets/bgs/0cc8f2fc332ff4cb68462b03751bf5d015ae5030.png) lightgray 50% / cover no-repeat;
+    background: url(./assets/bgs/bgnoise@4x.png) lightgray 50% / cover no-repeat;
 }
 
 img.cps {
