@@ -62,4 +62,91 @@ img.loading{
     align-items: center;
     gap: 24px;
     flex-shrink: 0;
+
+    color: #FEFEFF;
+
+    font-family: 'Lexend';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    .divider{
+        width: 200px;
+        height: 1px;
+        flex-shrink: 0;
+
+        border-radius: 1px;
+        background: rgba(254, 254, 255, 0.25);
+    }
+    
+    .inputs{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 16px;
+        align-self: stretch;
+        
+        .input{
+            display: flex;
+            height: 36px;
+            padding: 0 9px;
+            align-items: center;
+            gap: 9px;
+            align-self: stretch;
+
+            border-radius: 4px;
+            background: #650202;
+
+            .vdivider{
+                width: 1px;
+                height: 14px;
+
+                background: rgba(254, 254, 255, 0.50);
+            }
+
+            input{
+                display: flex;
+                padding-left: 3px;
+                align-items: center;
+                flex: 1 0 0;
+                align-self: stretch;
+
+                color: #FEFEFF;
+                font-family: Lexend;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+
+                background-color: transparent;
+                border: none;
+                outline: none;
+            }
+
+            input::placeholder{
+                color: rgba(254, 254, 255, 0.25);
+                font-weight: 300;
+            }
+        }
+
+        .password{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+
+            width: 100%;
+
+            span{
+                color: #FEFEFF;
+                font-family: Lexend;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-decoration-line: underline;
+            }
+        }
+    }
 }
