@@ -67,9 +67,7 @@ img.loading{
 
     font-family: 'Lexend';
     font-size: 24px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
 
     .divider{
         width: 200px;
@@ -81,6 +79,7 @@ img.loading{
     }
     
     .inputs{
+        
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -88,6 +87,8 @@ img.loading{
         align-self: stretch;
         
         .input{
+            position: relative;
+
             display: flex;
             height: 36px;
             padding: 0 9px;
@@ -106,6 +107,7 @@ img.loading{
             }
 
             input{
+
                 display: flex;
                 padding-left: 3px;
                 align-items: center;
@@ -115,9 +117,7 @@ img.loading{
                 color: #FEFEFF;
                 font-family: Lexend;
                 font-size: 16px;
-                font-style: normal;
                 font-weight: 400;
-                line-height: normal;
 
                 background-color: transparent;
                 border: none;
@@ -131,6 +131,7 @@ img.loading{
         }
 
         .password{
+
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -142,11 +143,60 @@ img.loading{
                 color: #FEFEFF;
                 font-family: Lexend;
                 font-size: 12px;
-                font-style: normal;
                 font-weight: 400;
-                line-height: normal;
                 text-decoration-line: underline;
             }
+
+            button.show{
+                height: calc(100% - 14px);
+                aspect-ratio: 1/1;
+                position: absolute;
+                right: 9px;
+                bottom: 6.792px;
+
+                background-color: transparent;
+                border: none;
+                background-image: url(./assets/icons/closed-eye.svg);
+                background-repeat: no-repeat;
+                background-position: center 100%;
+
+                cursor: pointer;
+            }
+
+            button.show.visible{
+                background-image: url(./assets/icons/eye.svg) !important;
+                background-position: center !important;
+                background-size: contain !important;
+
+                cursor: pointer;
+            }
         }
+    }
+
+    a{
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+
+        border-radius: 4px;
+        background: #FEFEFF;
+        border: none;
+
+        cursor: pointer;
+
+        color: #650202;
+        font-family: Lexend;
+        font-size: 20px;
+        font-weight: 500;
+        text-decoration: none;
+
+        transition: 200ms;
+    }
+
+    a:hover{
+        box-shadow: 0 0 4px #FEFEFF;
     }
 }
