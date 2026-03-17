@@ -3,6 +3,11 @@
     src: url('./assets/fonts/Lexend/Lexend-VariableFont_wght.ttf');
 }
 
+@font-face {
+    font-family: 'Space-Grotesk';
+    src: url('./assets/fonts/Space-Grotesk/SpaceGrotesk-VariableFont_wght.ttf');
+}
+
 *{
     padding: 0;
     margin: 0;
