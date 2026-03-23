@@ -42,11 +42,21 @@ body{
             font-family: Lexend;
             font-size: 14px;
 
-            span#datetime{
+            .horario{
                 color: #0F172A;
                 font-family: Space-Grotesk;
                 font-size: 24px;
                 font-weight: 500;
+
+                display: flex;
+
+                span:nth-child(2){
+                    animation: seg 1s steps(1) infinite;
+                }
+            }
+
+            span#weekday{
+                text-transform: capitalize;
             }
         }
 
@@ -66,6 +76,10 @@ body{
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 4px;
+
+                span{
+                    white-space: nowrap;
+                }
 
                 span#name{
                     color: #0F172A;
@@ -93,6 +107,12 @@ body{
             }
         }
     }
+}
+
+@keyframes seg {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .menu{
