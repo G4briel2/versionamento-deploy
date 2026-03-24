@@ -254,9 +254,11 @@ main{
     padding: 32px;
     gap: 32px;
 
+    height: calc(100vh - 64px);
+    overflow-y: auto;
+
     .greetings{
         display: flex;
-        height: 64px;
         justify-content: space-between;
         align-items: center;
         flex-shrink: 0;
@@ -381,14 +383,52 @@ main{
                 }
             }
 
-            img.information{
+            .info-container{
                 position: absolute;
                 top: 16px;
                 right: 16px;
 
-                width: 14px;
-                aspect-ratio: 1/1;
+                img{
+                    width: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    cursor: help;
+                }
             }
+
+            .info-container::after {
+                content: attr(data-tooltip);
+                
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-100%) translateY(10px);
+
+                font-family: Lexend;
+                background-color: #F15A24;
+                color: #fff;
+                font-size: 12px;
+
+                padding: 8px 12px;
+                border-radius: 8px;
+                width: 200px;
+                pointer-events: none;
+
+                box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.10);
+
+            
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+
+            .info-container:hover::after {
+                opacity: 1;
+                transform: translateX(-100%) translateY(0);
+            }
+
+            
         }
     }
 }
