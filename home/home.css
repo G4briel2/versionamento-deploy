@@ -319,4 +319,76 @@ main{
              box-shadow: 0 0 25px 3px rgba(236, 91, 19, 0.30);
         }
     }
+
+    .progress{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        align-self: stretch;
+
+        gap: 32px;
+
+        .data{
+            position: relative;
+
+            width: 100%;
+            display: flex;
+            padding: 24px;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            align-self: stretch;
+
+            border-radius: 12px;
+            background: #FCFCFF;
+
+            box-shadow: -2px -2px 3px 0 #FFF, 2px 2px 6px 0 rgba(0, 0, 0, 0.07);
+
+            span:nth-child(1){
+                color: #64748B;
+                font-family: Lexend;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+
+            .green{
+                color: #22C55E;
+            }
+
+            span:nth-child(2){
+                color: #0F172A;
+                font-family: "Space-Grotesk";
+                font-size: 30px;
+                font-weight: 700;
+
+                b{
+                    font-size: 14px;
+                }
+            }
+
+            span:nth-child(3){
+                color: #94A3B8;
+                font-family: Lexend;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px;
+
+                b{
+                    font-weight: 400;
+                }
+            }
+
+            img.information{
+                position: absolute;
+                top: 16px;
+                right: 16px;
+
+                width: 14px;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
 }
