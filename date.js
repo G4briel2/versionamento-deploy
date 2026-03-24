@@ -7,8 +7,8 @@ function iniciarRelogio() {
     const atualizar = () => {
         let now = new Date();
         
-        const horas = now.toLocaleTimeString('pt-BR', { hour: '2-digit', hour12: false });
-        const minutos = now.toLocaleTimeString('pt-BR', { minute: '2-digit', hour12: false });
+        const horas = String(now.getHours()).padStart(2, '0');
+        const minutos = String(now.getMinutes()).padStart(2, '0');
 
         elementoHoras.innerHTML = horas;
         elementoMinutos.innerHTML = minutos;
