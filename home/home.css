@@ -1,5 +1,7 @@
 body{
     background: #F6F6F8;
+    display: flex;
+    flex-direction: row;
 
     overflow: hidden;
 }
@@ -237,6 +239,84 @@ body{
 
                 border-right: #f78961 solid 4px;
             }
+        }
+    }
+}
+
+main{
+    margin-top: 64px;
+    width: calc(100% - 256px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 32px;
+    gap: 32px;
+
+    .greetings{
+        display: flex;
+        height: 64px;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        align-self: stretch;
+
+        .greet{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+
+            span:nth-child(1){
+                color: #0F172A;
+                font-family: "Space-Grotesk";
+                font-size: 30px;
+                font-weight: 600;
+                letter-spacing: -0.75px;
+            }
+
+            span:nth-child(2){
+                color: #64748B;
+                font-family: Lexend;
+                font-size: 16px;
+                font-weight: 400;
+
+                b{
+                    color: #F15A24;
+                    font-family: Lexend;
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        a.schedule{
+            display: flex;
+            padding: 12px 24px;
+            align-items: center;
+            gap: 8px;
+
+            border-radius: 12px;
+            background: #F15A24;
+
+            color: #FFF;
+            font-family: Lexend;
+            font-size: 16px;
+            font-weight: 400;
+
+            box-shadow: 0 0 15px 2px rgba(236, 91, 19, 0.20);
+
+            text-decoration: none;
+            transition: 200ms ease-in-out;
+        }
+
+        a.schedule:hover{
+            background: #f1632f;
+        }
+
+        a.schedule:active{
+             box-shadow: 0 0 25px 3px rgba(236, 91, 19, 0.30);
         }
     }
 }
